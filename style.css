@@ -6,7 +6,8 @@
     display: flex;
     background-color: rgb(234, 234, 234);
     border: 1px solid black;
-    padding: 32px;
+    border-radius: 32px;
+    padding: 32px 64px;
     margin: 32px auto;
     align-items: center;
     flex-direction: column;
@@ -17,40 +18,56 @@
     display: flex;
     background-color: white;
     border: 1px solid black;
+    border-radius: 32px;
     padding: 32px;
     margin: 32px auto;
     align-items: center;
     width: fit-content;
+    flex-direction: column;
+}
+
+.inner-container {
+    display: flex;
+    align-items: center;
 }
 
 #card1 {
     background-color: lightcyan;
     padding: 16px;
+    border-radius: 24px;
     border: 1px solid lightgrey;
-    box-shadow: 0px 0px 6px lightcyan;
+    box-shadow: 0px 0px 10px 5px lightcyan;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 16px;
+    width: 100px;
 }
 
 #card2 {
     background-color: lightgoldenrodyellow;
     padding: 16px;
     border: 1px solid lightgrey;
-    box-shadow: 0px 0px 6px lightgoldenrodyellow;
+    border-radius: 24px;
+    box-shadow: 0px 0px 10px 5px lightgoldenrodyellow;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 16px;
+    width: 100px;
 }
 
 button {
-    padding: 8px;
-    border-radius: 0;
+    padding: 10px;
+    border-radius: 16px;
     border: 1px solid lightgrey;
     background-color: white;
-    box-shadow: 0px 0px 4px lightgrey;
+    box-shadow: 0px 0px 4px 2px lightgrey;
     font-size: 16px;
 }
 
-
+button:hover {
+    box-shadow: 0 0 4px 2px rgb(187, 187, 187);
+    background-color: rgb(244, 244, 244);
+}
 
