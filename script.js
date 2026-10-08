@@ -6,8 +6,13 @@ let question = document.getElementById("question");
 let stage = 0;
 let category = '';
 let type = '';
+let ending = false;
 
 function leftbuttonclicked() {
+
+    if (ending == true) {
+        document.location.reload();
+    }
 
     if (stage == 0) {
         question.innerHTML = "Which type of chocolate?";
@@ -22,9 +27,10 @@ function leftbuttonclicked() {
         rightbutton.innerText = "Mars";
         stage = 2;
     } else if (stage == 2 && type == 'creamy') {
-        question.innerHTML = "Nice choice! Kinder is a classic."
-        leftbutton.style.display = 'none';
+        question.innerHTML = "Nice choice! Kinder buenoooooo."
+        leftbutton.innerText = 'Restart'
         rightbutton.style.display = 'none';
+        ending = true;
     } else if (stage == 1 && category == 'chips') {
         type = 'corn';
         question.innerHTML = "Which brand of corn chips?";
@@ -33,8 +39,19 @@ function leftbuttonclicked() {
         stage = 2;
     } else if (stage == 2 && type == 'corn') {
         question.innerHTML = "Nice choice! Flaming Hot Cheetos are my favorite!"
-        leftbutton.style.display = 'none';
+        leftbutton.innerText = 'reload'
         rightbutton.style.display = 'none';
+        ending = true;
+    } else if (stage == 2 && type == 'potato') {
+        question.innerHTML = "Nice choice! Lays is simple and classic."
+        leftbutton.innerText = 'reload'
+        rightbutton.style.display = 'none';
+        ending = true;
+    } else if (stage == 2 && type == 'crunchy') {
+        question.innerHTML = "Nice choice! a famous wafer crunch!"
+        leftbutton.innerText = 'reload'
+        rightbutton.style.display = 'none';
+        ending = true;
     }
 }
 
@@ -53,8 +70,9 @@ function rightbuttonclicked() {
         stage = 2;
     } else if (stage == 2 && type == 'potato') {
         question.innerHTML = "Nice choice! can't go wrong with Pringles."
-        leftbutton.style.display = 'none';
+        leftbutton.innerText = 'reload'
         rightbutton.style.display = 'none';
+        ending = true;
     } else if (stage == 1 && category == 'chocolate') {
         type = 'crunchy';
         question.innerHTML = "Which brand of crunchy chocolate?";
@@ -63,8 +81,19 @@ function rightbuttonclicked() {
         stage = 2;
     } else if (stage == 2 && type == 'crunchy') {
         question.innerHTML = "Nice choice! snickers are the best!"
-        leftbutton.style.display = 'none';
+        leftbutton.innerText = 'reload'
         rightbutton.style.display = 'none';
+        ending = true;
+    } else if (stage == 2 && type == 'creamy') {
+        question.innerHTML = "Nice choice! carmel creamy sensation!"
+        leftbutton.innerText = 'reload'
+        rightbutton.style.display = 'none';
+        ending = true;
+    } else if (stage == 2 && type == 'corn') {
+        question.innerHTML = "Nice choice! the most famous edible triangles!"
+        leftbutton.innerText = 'reload'
+        rightbutton.style.display = 'none';
+        ending = true;
     }
 }
 
